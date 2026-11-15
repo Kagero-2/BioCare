@@ -1,0 +1,8 @@
+node_modules/
+.env
+artifacts/
+cache/
+frontend/vendor/
+scripts/run/logs/
+dist/
+*.log
