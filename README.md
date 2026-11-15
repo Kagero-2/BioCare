@@ -87,6 +87,22 @@ Buka **http://127.0.0.1:3000**, bukan `localhost` (ditolak: `BAD_ORIGIN`).
 
 Kunci ini publik (bawaan Hardhat), hanya untuk jaringan lokal. Jangan pernah dipakai di jaringan sungguhan.
 
+## Cara pakai
+
+**Login:** pilih akun di MetaMask, buka http://127.0.0.1:3000, lalu klik **Connect** → **Sign** (tanda tangan di MetaMask, gratis) → **Masuk**. Untuk ganti akun, logout dulu lalu pilih akun lain di MetaMask.
+
+**Import akun uji ke MetaMask:** klik ikon akun → **Add account or hardware wallet** → **Import account** → tempel private key dari tabel di atas.
+
+**Skenario singkat (±10 menit):**
+1. **Pasien (#3):** buat appointment baru ke dr. Dewi (#2), pilih tanggal dan slot, lalu setujui transaksi pemberian akses di MetaMask.
+2. **Dokter (#2):** buka daftar appointment, **Terima** appointment dari pasien #3.
+3. **Dokter (#2):** buka Detail Pasien #3, tambah rekam medis beserta resep (satuan atau racikan), lalu setujui transaksi di MetaMask.
+4. **Pasien (#3):** buka **Rekam Medis Saya** dan klik **Verifikasi** (harus "Terverifikasi"). Buka **Resep Digital** untuk melihat atau mencetak resep. Di Riwayat, pasien juga bisa **mencabut akses dokter**.
+5. **Admin (#0):** lihat **Dashboard**, **Akses Dokter**, dan **Riwayat Aktivitas**. Buka **Data Dokter** untuk memberi role Dokter ke akun #9.
+6. **Registrasi pasien baru:** login dengan akun #4 (belum punya role), lalu isi form registrasi pasien di halaman login.
+
+Setelah `start.bat` dijalankan ulang, semua data kembali ke data contoh dan MetaMask perlu **Clear activity tab data**.
+
 ## Struktur
 
 ```
