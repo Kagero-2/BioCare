@@ -1,0 +1,38 @@
+{
+  "name": "hospital-dapp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mini project dApp Hospital Management",
+  "scripts": {
+    "vendor": "node scripts/vendor.mjs",
+    "chain": "hardhat node",
+    "compile": "hardhat compile && node scripts/export-abi.js",
+    "deploy:local": "hardhat run scripts/deploy-local.js --network localhost",
+    "dev": "node --watch backend/server.js",
+    "start": "node backend/server.js",
+    "test:contract": "hardhat run scripts/test-contract.js",
+    "test:roles": "node scripts/test-roles.js",
+    "test:hash": "node scripts/test-hash.js",
+    "test:parity": "node scripts/test-parity.js",
+    "test:api": "node scripts/test-api.js",
+    "test:e2e": "node scripts/test-e2e-node.mjs",
+    "test:routes": "node scripts/test-routes.js"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.3.0",
+    "ethers": "^6.17.0",
+    "express": "^5.3.0",
+    "helmet": "^8.3.0",
+    "jose": "^6.2.17",
+    "lucide-static": "^1.72.0",
+    "mysql2": "^3.24.6"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^4.2.2",
+    "hardhat": "^3.21.2"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22.10"
+  }
+}

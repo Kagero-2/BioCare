@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f5f7">
+  <title>Dashboard · BioCare</title>
+  <link rel="icon" href="assets/biocare-logo.png" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/inter/inter.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+  <a class="sr-only" href="#content">Lewati ke konten</a>
+  <div class="app" id="app">
+    <!-- Sidebar: menu diisi router.js sesuai role -->
+    <aside class="sidebar" id="sidebar" aria-label="Navigasi">
+      <div class="sidebar-brand">
+        <img class="brand-mark" src="assets/biocare-logo.png" alt="" width="36" height="36">
+        <div>
+          <p class="brand-name">BioCare</p>
+          <p class="brand-sub">Rekam medis on-chain</p>
+        </div>
+        <button type="button" class="btn btn-ghost btn-icon sidebar-close" id="drawer-close" aria-label="Tutup menu">
+          <span data-icon="x"></span>
+        </button>
+      </div>
+      <nav class="nav" id="nav" aria-label="Menu utama"></nav>
+      <div class="sidebar-foot">
+        <div class="user-card" id="user-card"></div>
+      </div>
+    </aside>
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+    <div class="main">
+      <header class="topbar">
+        <button type="button" class="btn btn-ghost btn-icon menu-toggle" id="drawer-open"
+                aria-label="Buka menu" aria-controls="sidebar" aria-expanded="false">
+          <span data-icon="menu"></span>
+        </button>
+        <div class="topbar-heading">
+          <h1 class="topbar-title" id="page-title" tabindex="-1">Dashboard</h1>
+          <p class="topbar-sub" id="page-sub"></p>
+        </div>
+        <div class="topbar-meta">
+          <span class="net-chip" id="network-chip"></span>
+          <span class="wallet-chip">
+            <span data-icon="wallet"></span>
+            <span class="mono" id="wallet-short"></span>
+            <button type="button" class="btn btn-ghost btn-icon btn-sm" id="copy-wallet" aria-label="Salin alamat wallet" title="Salin alamat wallet">
+              <span data-icon="copy"></span>
+            </button>
+          </span>
+          <div class="account">
+            <button type="button" class="account-btn" id="account-btn" aria-expanded="false" aria-controls="account-menu" aria-label="Menu akun"></button>
+            <div class="account-menu" id="account-menu" hidden></div>
+          </div>
+        </div>
+      </header>
+      <main class="content" id="content" tabindex="-1"></main>
+    </div>
+  </div>
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>

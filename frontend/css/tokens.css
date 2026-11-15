@@ -1,0 +1,157 @@
+/* tokens.css — variabel desain (warna, tipografi, spacing, dll.)
+   Semua file CSS lain hanya memakai variabel dari sini. */
+/* Font Inter lokal (hasil `npm run vendor`) dimuat lewat <link> di HTML agar tidak berantai. */
+
+:root {
+  /* Teal (warna utama) */
+  --teal-50:  #f0fdfa;
+  --teal-100: #ccfbf1;
+  --teal-200: #99f6e4;
+  --teal-300: #5eead4;
+  --teal-400: #2dd4bf;
+  --teal-500: #14b8a6;
+  --teal-600: #0d9488;
+  --teal-700: #0f766e; /* tombol utama: kontras 5.5:1 terhadap putih */
+  --teal-800: #115e59;
+  --teal-900: #134e4a; /* latar sidebar */
+  --teal-950: #0b3532;
+
+  /* Abu-abu netral (sedikit dingin) */
+  --gray-0:   #ffffff;
+  --gray-50:  #f7f9fa; /* latar halaman */
+  --gray-100: #eef1f3;
+  --gray-200: #e1e6e9; /* border tipis */
+  --gray-300: #c9d1d6;
+  --gray-400: #9aa5ad;
+  --gray-500: #6b7780; /* teks sekunder: 4.6:1 di putih */
+  --gray-600: #525d66;
+  --gray-700: #3b444c;
+  --gray-800: #252c32;
+  --gray-900: #151a1e; /* teks utama */
+
+  /* Status */
+  --success-50: #ecfdf3; --success-600: #16803c; --success-700: #11652f;
+  --warning-50: #fffbeb; --warning-600: #b45309; --warning-700: #92400e;
+  --danger-50:  #fef2f2; --danger-600:  #c62828; --danger-700:  #a11d1d;
+  --info-50:    #eff6ff; --info-600:    #1d5fd1; --info-700:    #174ba6;
+
+  /* Peran semantik */
+  --bg: var(--gray-50);
+  --surface: var(--gray-0);
+  --border: var(--gray-200);
+  --text: var(--gray-900);
+  --text-muted: var(--gray-500);
+  --primary: var(--teal-700);
+  --primary-hover: var(--teal-800);
+  --focus: #f59e0b; /* focus ring kuning: terlihat di latar putih & teal gelap */
+
+  /* Tipografi */
+  --font: "Inter", system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --fs-xs: 0.75rem;   /* 12px */
+  --fs-sm: 0.875rem;  /* 14px */
+  --fs-md: 1rem;      /* 16px */
+  --fs-lg: 1.125rem;  /* 18px */
+  --fs-xl: 1.375rem;  /* 22px */
+  --fs-2xl: 1.75rem;  /* 28px */
+  --fs-3xl: 2.25rem;  /* 36px */
+  --fw-regular: 400; --fw-medium: 500; --fw-semibold: 600; --fw-bold: 700;
+  --lh-tight: 1.25; --lh-normal: 1.5;
+
+  /* Spacing (kelipatan 4px) */
+  --sp-1: 0.25rem; --sp-2: 0.5rem; --sp-3: 0.75rem; --sp-4: 1rem;
+  --sp-5: 1.25rem; --sp-6: 1.5rem; --sp-8: 2rem; --sp-10: 2.5rem; --sp-12: 3rem;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;  /* tombol, input, select, textarea, menu */
+  --radius-lg: 20px;  /* card, modal */
+  --radius-full: 999px;
+
+  /* Shadow halus */
+  --shadow-sm: 0 1px 2px rgb(16 24 32 / 0.06);
+  --shadow-md: 0 2px 8px rgb(16 24 32 / 0.08);
+  --shadow-lg: 0 12px 32px rgb(16 24 32 / 0.16);
+
+  /* Transisi */
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --t-fast: 120ms var(--ease);
+  --t-base: 200ms var(--ease);
+
+  /* Ukuran layout */
+  --sidebar-w: 256px;
+  --topbar-h: 64px;
+}
+
+/* Bahasa visual "ala Apple" (lembut, lega, presisi, tenang).
+   Dipakai halaman login dulu; dashboard bisa ikut memakainya nanti. */
+:root {
+  /* Netral: tidak ada hitam/putih pekat */
+  --canvas: #f5f5f7;               /* latar halaman */
+  --ink: #1d1d1f;                  /* teks utama  (16.1:1 di putih) */
+  --ink-2: #6e6e73;                /* teks sekunder (5.0:1 di putih, 4.6:1 di --canvas) */
+  --hairline: rgba(0, 0, 0, 0.06); /* garis pemisah */
+  --fill: #f2f2f4;                 /* latar input */
+  --fill-hover: #ebebee;
+  --surface-sunken: #fafafb;        /* header tabel */
+  --hover: rgba(0, 0, 0, 0.025);    /* hover baris/daftar */
+  --hover-strong: rgba(0, 0, 0, 0.05); /* hover tombol ghost & item menu */
+  --role-patient-bg: #fff4ec;       /* badge Patient: teks 5.9:1 di latarnya */
+  --role-patient-fg: #a1420c;
+
+  /* Aksen teal yang diredam (bukan neon); teks putih di atasnya >= 5:1 */
+  --accent: #1e6b64;
+  --accent-hover: #247870;
+  --accent-soft: rgba(30, 107, 100, 0.10);
+  --accent-ring: rgba(30, 107, 100, 0.28); /* focus ring lembut 4px */
+  --accent-tint: rgba(30, 107, 100, 0.05); /* latar panel Blockchain Proof */
+  --accent-line: rgba(30, 107, 100, 0.14);
+  --accent-shadow: rgba(30, 107, 100, 0.2); /* bayangan logo */
+  --ok: #248a3d;                           /* titik status jaringan */
+
+  /* Permukaan kaca: dipakai seperlunya, selalu dengan fallback solid */
+  --glass: rgba(255, 255, 255, 0.72);
+  --glass-strong: rgba(255, 255, 255, 0.78); /* sidebar desktop */
+  --glass-canvas: rgba(245, 245, 247, 0.72); /* topbar desktop */
+  --scrim-soft: rgba(29, 29, 31, 0.32);      /* latar drawer */
+  --glass-solid: #ffffff;
+  --glass-edge: rgba(255, 255, 255, 0.6);
+
+  --font-display: -apple-system, BlinkMacSystemFont, "Inter", system-ui, sans-serif;
+
+  --radius-xl: 28px;   /* card besar */
+  --radius-btn: 14px;  /* tombol utama */
+  --radius-field: 12px;
+
+  /* Bayangan berlapis: kontak + sebaran + jatuh jauh */
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.04), 0 24px 48px -12px rgba(0, 0, 0, 0.10);
+  --shadow-btn: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 10px -2px rgba(30, 107, 100, 0.25);
+  --shadow-btn-hover: 0 2px 4px rgba(0, 0, 0, 0.08), 0 10px 20px -6px rgba(30, 107, 100, 0.35);
+  --highlight-top: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-1: 200ms;
+  --dur-2: 350ms;
+
+  /* Peran semantik lama dipetakan ke bahasa visual baru,
+     sehingga semua komponen (dashboard & login) memakai satu gaya. */
+  --bg: var(--canvas);
+  --text: var(--ink);
+  --text-muted: var(--ink-2);
+  --border: rgba(0, 0, 0, 0.07);
+  --primary: var(--accent);
+  --primary-hover: var(--accent-hover);
+  --focus: var(--accent);
+  --font: var(--font-display);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px -6px rgba(0, 0, 0, 0.08);
+  --shadow-lg: var(--shadow-soft);
+  --radius-lg: 20px;
+  --t-fast: var(--dur-1) var(--ease-out);
+  --t-base: var(--dur-2) var(--ease-out);
+  --sidebar-w: 264px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --t-fast: 0ms; --t-base: 0ms; --dur-1: 0ms; --dur-2: 0ms; }
+}

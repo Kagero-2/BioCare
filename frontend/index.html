@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f5f7">
+  <title>Masuk · BioCare</title>
+  <link rel="icon" href="assets/biocare-logo.png" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/inter/inter.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="auth">
+  <main class="auth-card" aria-labelledby="auth-title">
+    <header class="auth-head">
+      <img class="auth-mark" src="assets/biocare-logo.png" alt="" width="64" height="64">
+      <h1 class="auth-title" id="auth-title">BioCare</h1>
+      <p class="auth-sub">Rekam medis Anda, tercatat aman di blockchain.</p>
+    </header>
+
+    <ol class="steps" aria-label="Langkah masuk">
+      <li class="step" data-step="0">Connect</li>
+      <li class="step" data-step="1">Sign</li>
+      <li class="step" data-step="2">Masuk</li>
+    </ol>
+
+    <!-- Isi berganti sesuai state (connect, sign, siap masuk, registrasi, error) -->
+    <div class="stage" id="stage"></div>
+    <p class="sr-only" id="announce" aria-live="polite"></p>
+
+    <footer class="auth-foot">
+      <span data-icon="shield-check"></span>Secured by Ethereum smart contract
+    </footer>
+  </main>
+  <script type="module" src="js/login.js"></script>
+</body>
+</html>
